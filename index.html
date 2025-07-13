@@ -17,6 +17,7 @@
 
     :root {
       --text-color: #083f87;
+      --hover-color: #0a609c;
       --logo-size: clamp(60px, 20vw, 100px);
       --h2-size: clamp(2rem, 5vw, 3rem);
       --p-size: clamp(1.2rem, 4vw, 2rem);
@@ -27,11 +28,12 @@
     html, body {
       margin: 0;
       padding: 0;
-      color: var(--text-color);
       font-family: 'Apricot', sans-serif;
       background: url('background.jpg') no-repeat center center;
       background-size: cover;
-      background-attachment: scroll;
+      min-height: 100%;
+      overflow-x: hidden;
+      color: var(--text-color);
       text-align: center;
     }
 
@@ -65,7 +67,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      color: var(--text-color);
+      color: var(--text-color) !important;
       margin: 0;
       z-index: 2;
     }
@@ -94,24 +96,24 @@
     h2 {
       font-size: var(--h2-size);
       margin: 0 0 12px 0;
-      color: var(--text-color);
+      color: var(--text-color) !important;
     }
 
     p {
       font-size: var(--p-size);
       line-height: 1.6;
       margin: 8px 0;
-      color: var(--text-color);
+      color: var(--text-color) !important;
     }
 
     a {
-      color: var(--text-color);
+      color: var(--text-color) !important;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     a:hover {
-      color: #0a609c;
+      color: var(--hover-color) !important;
     }
 
     #contact p a {
@@ -133,6 +135,16 @@
     .social-icon img:hover {
       transform: scale(1.1);
     }
+
+    @media (max-width: 600px) {
+      body, html {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 30px 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -149,15 +161,16 @@
       <h2><a href="#about">About Me</a></h2>
       <p>Hi, I’m Emma - Welcome!</p>
       <p>
-I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.
+        I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.
 
-Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.
+        Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.
 
-My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.
+        My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.
 
-Since then, I’ve been on a path of rediscovery, reconnecting with my childhood passions, discovering new ones, and learning to find joy in the little things.
+        Since then, I’ve been on a path of rediscovery, reconnecting with my childhood passions, discovering new ones, and learning to find joy in the little things.
 
-I believe that when we honour who we truly are, everyone around us benefits. You deserve to feel like you again and I’d love to help you get there.</p>
+        I believe that when we honour who we truly are, everyone around us benefits. You deserve to feel like you again and I’d love to help you get there.
+      </p>
     </section>
 
     <section id="community">
@@ -181,8 +194,7 @@ I believe that when we honour who we truly are, everyone around us benefits. You
     <section id="journal">
       <h2><a href="#journal">My Self Care Journal</a></h2>
       <div class="social-icon">
-        <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div"
-          target="_blank">
+        <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div" target="_blank">
           <img src="Amazon.svg" alt="View on Amazon" />
         </a>
       </div>
@@ -206,6 +218,7 @@ I believe that when we honour who we truly are, everyone around us benefits. You
   </script>
 </body>
 </html>
+
 
 
 
