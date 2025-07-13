@@ -15,26 +15,33 @@
       src: url('Apricot-BF650c4a6357ce1.otf') format('opentype');
     }
 
-    :root {
-      --text-color: #083f87;
-      --hover-color: #0a609c;
-      --logo-size: clamp(60px, 20vw, 100px);
-      --h2-size: clamp(2rem, 5vw, 3rem);
-      --p-size: clamp(1.2rem, 4vw, 2rem);
-      --title-size: clamp(2rem, 7vw, 3rem);
-      --subtitle-size: clamp(1.5rem, 6vw, 2.5rem);
+    /* Fix for Samsung Internet / mobile default styles */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      color: #083f87 !important;
     }
 
     html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Apricot', sans-serif;
+      color: #083f87 !important;
       background: url('background.jpg') no-repeat center center;
       background-size: cover;
-      min-height: 100%;
-      overflow-x: hidden;
-      color: var(--text-color);
+      background-attachment: scroll;
       text-align: center;
+      font-family: 'Apricot', sans-serif;
+      -webkit-text-fill-color: #083f87 !important; /* Fix Samsung Internet light blue bug */
+    }
+
+    :root {
+      --text-color: #083f87;
+      --logo-size: clamp(60px, 20vw, 100px);
+      --h2-size: clamp(2rem, 5vw, 3rem);
+      --p-size: clamp(1.2rem, 4vw, 2rem);
+      --title-size: clamp(2rem, 7vw, 3rem);
+      --subtitle-size: clamp(1.5rem, 6vw, 2.5rem);
     }
 
     header {
@@ -67,7 +74,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      color: var(--text-color) !important;
+      color: var(--text-color);
       margin: 0;
       z-index: 2;
     }
@@ -96,24 +103,24 @@
     h2 {
       font-size: var(--h2-size);
       margin: 0 0 12px 0;
-      color: var(--text-color) !important;
+      color: var(--text-color);
     }
 
     p {
       font-size: var(--p-size);
       line-height: 1.6;
       margin: 8px 0;
-      color: var(--text-color) !important;
+      color: var(--text-color);
     }
 
     a {
-      color: var(--text-color) !important;
+      color: var(--text-color);
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     a:hover {
-      color: var(--hover-color) !important;
+      color: #0a609c;
     }
 
     #contact p a {
@@ -135,75 +142,61 @@
     .social-icon img:hover {
       transform: scale(1.1);
     }
-
-    @media (max-width: 600px) {
-      body, html {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 30px 15px;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
     <div class="wave-container">
       <img src="Wave.svg" alt="Wave Logo" id="wave" class="wave" />
-      <h1 class="title">BECOMING YOU</h1>
-      <p class="subtitle">Nurturing your authentic self one day at a time</p>
+      <h1 class="title" style="color:#083f87 !important;">BECOMING YOU</h1>
+      <p class="subtitle" style="color:#083f87 !important;">Nurturing your authentic self one day at a time</p>
     </div>
   </header>
 
   <main class="content">
     <section id="about">
-      <h2><a href="#about">About Me</a></h2>
-      <p>Hi, I’m Emma - Welcome!</p>
-      <p>
-        I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.
-
-        Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.
-
-        My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.
-
-        Since then, I’ve been on a path of rediscovery, reconnecting with my childhood passions, discovering new ones, and learning to find joy in the little things.
-
+      <h2><a href="#about" style="color:#083f87 !important;">About Me</a></h2>
+      <p style="color:#083f87 !important;">Hi, I’m Emma - Welcome!</p>
+      <p style="color:#083f87 !important;">
+        I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.<br><br>
+        Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.<br><br>
+        My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.<br><br>
+        Since then, I’ve been on a path of rediscovery, reconnecting with my childhood passions, discovering new ones, and learning to find joy in the little things.<br><br>
         I believe that when we honour who we truly are, everyone around us benefits. You deserve to feel like you again and I’d love to help you get there.
       </p>
     </section>
 
     <section id="community">
-      <h2><a href="#community">Join the ‘Becoming You’ online community - A safe and nurturing place to grow</a></h2>
+      <h2><a href="#community" style="color:#083f87 !important;">Join the ‘Becoming You’ online community - A safe and nurturing place to grow</a></h2>
       <div class="social-icon">
-        <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank">
+        <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank" style="color:#083f87 !important;">
           <img src="facebook.png" alt="Join us on Facebook" />
         </a>
       </div>
     </section>
 
     <section id="resources">
-      <h2><a href="#resources">Resources and Courses (incl. some fab free stuff!)</a></h2>
+      <h2><a href="#resources" style="color:#083f87 !important;">Resources and Courses (incl. some fab free stuff!)</a></h2>
       <h2>
-        <a href="https://theleap.co/creator/becomingyou/" target="_blank" style="font-family: 'Apricot';">
+        <a href="https://theleap.co/creator/becomingyou/" target="_blank" style="font-family: 'Apricot'; color:#083f87 !important;">
           Click here
         </a>
       </h2>
     </section>
 
     <section id="journal">
-      <h2><a href="#journal">My Self Care Journal</a></h2>
+      <h2><a href="#journal" style="color:#083f87 !important;">My Self Care Journal</a></h2>
       <div class="social-icon">
-        <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div" target="_blank">
+        <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div" target="_blank" style="color:#083f87 !important;">
           <img src="Amazon.svg" alt="View on Amazon" />
         </a>
       </div>
     </section>
 
     <section id="contact">
-      <h2><a href="#contact">Get in touch</a></h2>
+      <h2><a href="#contact" style="color:#083f87 !important;">Get in touch</a></h2>
       <p>
-        <a href="mailto:becomingyou36@gmail.com">becomingyou36@gmail.com</a>
+        <a href="mailto:becomingyou36@gmail.com" style="color:#083f87 !important;">becomingyou36@gmail.com</a>
       </p>
     </section>
   </main>
