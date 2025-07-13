@@ -8,31 +8,10 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 
-  <!-- Apricot Font -->
   <style>
     @font-face {
       font-family: 'Apricot';
       src: url('Apricot-BF650c4a6357ce1.otf') format('opentype');
-    }
-
-    /* Fix for Samsung Internet / mobile default styles */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      color: #083f87 !important;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      color: #083f87 !important;
-      background: url('background.jpg') no-repeat center center;
-      background-size: cover;
-      background-attachment: scroll;
-      text-align: center;
-      font-family: 'Apricot', sans-serif;
-      -webkit-text-fill-color: #083f87 !important; /* Fix Samsung Internet light blue bug */
     }
 
     :root {
@@ -42,6 +21,28 @@
       --p-size: clamp(1.2rem, 4vw, 2rem);
       --title-size: clamp(2rem, 7vw, 3rem);
       --subtitle-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    /* Reset and force text color everywhere */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      color: var(--text-color) !important;
+      -webkit-text-fill-color: var(--text-color) !important;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Apricot', sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: white; /* fallback */
+      text-align: center;
+      color: var(--text-color) !important;
+      -webkit-text-fill-color: var(--text-color) !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
 
     header {
@@ -55,6 +56,7 @@
       justify-content: center;
       align-items: flex-end;
       height: 100%;
+      background: transparent !important;
     }
 
     .wave {
@@ -63,6 +65,8 @@
       height: auto;
       transform: translateX(-100px);
       animation: waveCrashIn 2s ease forwards;
+      filter: none !important;  /* remove any filter */
+      opacity: 1 !important;
     }
 
     @keyframes waveCrashIn {
@@ -74,9 +78,10 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      color: var(--text-color);
       margin: 0;
       z-index: 2;
+      color: var(--text-color) !important;
+      -webkit-text-fill-color: var(--text-color) !important;
     }
 
     .title {
@@ -94,53 +99,71 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      background: transparent !important;
     }
 
     section {
       padding: 40px 20px;
+      background: transparent !important;
     }
 
     h2 {
       font-size: var(--h2-size);
       margin: 0 0 12px 0;
-      color: var(--text-color);
+      color: var(--text-color) !important;
+      -webkit-text-fill-color: var(--text-color) !important;
     }
 
     p {
       font-size: var(--p-size);
       line-height: 1.6;
       margin: 8px 0;
-      color: var(--text-color);
+      color: var(--text-color) !important;
+      -webkit-text-fill-color: var(--text-color) !important;
     }
 
     a {
-      color: var(--text-color);
+      color: var(--text-color) !important;
       text-decoration: none;
       transition: color 0.3s ease;
+      -webkit-text-fill-color: var(--text-color) !important;
     }
 
     a:hover {
-      color: #0a609c;
+      color: #0a609c !important;
     }
 
     #contact p a {
       font-size: clamp(1.5rem, 5vw, 2.5rem);
       display: inline-block;
       margin-top: 10px;
+      color: var(--text-color) !important;
+      -webkit-text-fill-color: var(--text-color) !important;
     }
 
     .social-icon {
       margin-top: 20px;
+      background: transparent !important;
     }
 
     .social-icon img {
       width: var(--logo-size);
       height: auto;
       transition: transform 0.3s ease;
+      filter: none !important;
+      opacity: 1 !important;
+      background: transparent !important;
     }
 
     .social-icon img:hover {
       transform: scale(1.1);
+    }
+
+    /* Remove black bar on mobile caused by background attachment */
+    @media (max-width: 768px) {
+      html, body {
+        background-attachment: scroll !important;
+      }
     }
   </style>
 </head>
@@ -148,16 +171,16 @@
   <header>
     <div class="wave-container">
       <img src="Wave.svg" alt="Wave Logo" id="wave" class="wave" />
-      <h1 class="title" style="color:#083f87 !important;">BECOMING YOU</h1>
-      <p class="subtitle" style="color:#083f87 !important;">Nurturing your authentic self one day at a time</p>
+      <h1 class="title">BECOMING YOU</h1>
+      <p class="subtitle">Nurturing your authentic self one day at a time</p>
     </div>
   </header>
 
   <main class="content">
     <section id="about">
-      <h2><a href="#about" style="color:#083f87 !important;">About Me</a></h2>
-      <p style="color:#083f87 !important;">Hi, I’m Emma - Welcome!</p>
-      <p style="color:#083f87 !important;">
+      <h2><a href="#about">About Me</a></h2>
+      <p>Hi, I’m Emma - Welcome!</p>
+      <p>
         I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.<br><br>
         Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.<br><br>
         My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.<br><br>
@@ -167,36 +190,37 @@
     </section>
 
     <section id="community">
-      <h2><a href="#community" style="color:#083f87 !important;">Join the ‘Becoming You’ online community - A safe and nurturing place to grow</a></h2>
+      <h2><a href="#community">Join the ‘Becoming You’ online community - A safe and nurturing place to grow</a></h2>
       <div class="social-icon">
-        <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank" style="color:#083f87 !important;">
+        <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank">
           <img src="facebook.png" alt="Join us on Facebook" />
         </a>
       </div>
     </section>
 
     <section id="resources">
-      <h2><a href="#resources" style="color:#083f87 !important;">Resources and Courses (incl. some fab free stuff!)</a></h2>
+      <h2><a href="#resources">Resources and Courses (incl. some fab free stuff!)</a></h2>
       <h2>
-        <a href="https://theleap.co/creator/becomingyou/" target="_blank" style="font-family: 'Apricot'; color:#083f87 !important;">
+        <a href="https://theleap.co/creator/becomingyou/" target="_blank" style="font-family: 'Apricot';">
           Click here
         </a>
       </h2>
     </section>
 
     <section id="journal">
-      <h2><a href="#journal" style="color:#083f87 !important;">My Self Care Journal</a></h2>
+      <h2><a href="#journal">My Self Care Journal</a></h2>
       <div class="social-icon">
-        <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div" target="_blank" style="color:#083f87 !important;">
+        <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div"
+          target="_blank">
           <img src="Amazon.svg" alt="View on Amazon" />
         </a>
       </div>
     </section>
 
     <section id="contact">
-      <h2><a href="#contact" style="color:#083f87 !important;">Get in touch</a></h2>
+      <h2><a href="#contact">Get in touch</a></h2>
       <p>
-        <a href="mailto:becomingyou36@gmail.com" style="color:#083f87 !important;">becomingyou36@gmail.com</a>
+        <a href="mailto:becomingyou36@gmail.com">becomingyou36@gmail.com</a>
       </p>
     </section>
   </main>
