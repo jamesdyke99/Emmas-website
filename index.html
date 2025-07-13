@@ -12,7 +12,7 @@
   <style>
     :root {
       --wave-max-width: 600px;
-      --facebook-logo-size: 100px;
+      --facebook-logo-size: 80px;
     }
 
     @font-face {
@@ -103,13 +103,12 @@
     }
 
     section {
-      padding: 50px 20px 50px 20px;
-      min-height: auto;
+      padding: 40px 20px;
       box-sizing: border-box;
     }
 
     h2 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin: 0 0 12px 0;
     }
 
@@ -142,12 +141,37 @@
 
     .social-icon img {
       width: var(--facebook-logo-size);
+      max-width: 100%;
       height: auto;
       transition: transform 0.3s ease;
     }
 
     .social-icon img:hover {
       transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2rem;
+        top: 60%;
+      }
+
+      .subtitle {
+        font-size: 1.8rem;
+        top: 72%;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+
+      :root {
+        --facebook-logo-size: 60px;
+      }
     }
   </style>
 </head>
@@ -163,21 +187,21 @@
   <main class="content">
     <section id="about">
       <h2><a href="#about">About Me</a></h2>
-      <p>Hi, I’m Emma - Welcome!
-      I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.
+      <p>Hi, I’m Emma - Welcome!<br/>
+      Hi, I’m Emma - Welcome!
+I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.
 
-      Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.
+Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.
 
-      My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.
+My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.
 
-      Since then, I’ve been on a path of rediscovery, reconnecting with my childhood passions, discovering new ones, and learning to find joy in the little things.
+Since then, I’ve been on a path of rediscovery, reconnecting with my childhood passions, discovering new ones, and learning to find joy in the little things.
 
-      I believe that when we honour who we truly are, everyone around us benefits. You deserve to feel like you again and I’d love to help you get there.</p>
+I believe that when we honour who we truly are, everyone around us benefits. You deserve to feel like you again and I’d love to help you get there.</p>
     </section>
 
     <section id="community">
       <h2><a href="#community">Join the ‘Becoming You’ online community - A safe and nurturing place to grow</a></h2>
-      <p></p>
       <div class="social-icon">
         <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank" rel="noopener noreferrer">
           <img src="facebook.png" alt="Join us on Facebook" />
@@ -187,28 +211,31 @@
 
     <section id="resources">
       <h2><a href="#resources">Resources and Courses (incl. some fab free stuff!)</a></h2>
-      <p></p>
       <h2>
-        <a href="https://theleap.co/creator/becomingyou/" target="_blank" rel="noopener noreferrer" style="font-size: 3rem; font-family: 'Apricot', sans-serif; transition: color 0.3s ease; display: inline-block;">
+        <a href="https://theleap.co/creator/becomingyou/" target="_blank" rel="noopener noreferrer"
+          style="font-size: 3rem; font-family: 'Apricot', sans-serif; transition: color 0.3s ease; display: inline-block;">
           Click here
         </a>
       </h2>
     </section>
 
-  <section id="journal">
-  <h2><a href="#journal">My Self Care Journal</a></h2>
-  <p></p>
-  <div class="social-icon">
-    <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div" target="_blank" rel="noopener noreferrer">
-      <img src="Amazon.svg" alt="View on Amazon" />
-    </a>
-  </div>
-</section>
-
+    <section id="journal">
+      <h2><a href="#journal">My Self Care Journal</a></h2>
+      <div class="social-icon">
+        <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div"
+          target="_blank" rel="noopener noreferrer">
+          <img src="Amazon.svg" alt="View on Amazon" />
+        </a>
+      </div>
+    </section>
 
     <section id="contact">
       <h2><a href="#contact">Get in touch</a></h2>
-      <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=becomingyou36@gmail.com" target="_blank" rel="noopener noreferrer">becomingyou36@gmail.com</a></p>
+      <p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=becomingyou36@gmail.com" target="_blank" rel="noopener noreferrer">
+          becomingyou36@gmail.com
+        </a>
+      </p>
     </section>
   </main>
 
