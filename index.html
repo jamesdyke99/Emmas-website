@@ -5,40 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Becoming You</title>
 
-  <!-- Google Font: Montserrat for title -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
 
-  <!-- Font: Apricot -->
+  <!-- Apricot Font -->
   <style>
-    :root {
-      --wave-max-width: 600px;
-      --facebook-logo-size: 80px;
-    }
-
     @font-face {
       font-family: 'Apricot';
       src: url('Apricot-BF650c4a6357ce1.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
+    }
+
+    :root {
+      --text-color: #083f87;
+      --logo-size: clamp(60px, 20vw, 100px);
+      --h2-size: clamp(2rem, 5vw, 3rem);
+      --p-size: clamp(1.2rem, 4vw, 2rem);
+      --title-size: clamp(2rem, 7vw, 3rem);
+      --subtitle-size: clamp(1.5rem, 6vw, 2.5rem);
     }
 
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      scroll-behavior: smooth;
+      color: var(--text-color);
       font-family: 'Apricot', sans-serif;
-      color: #083f87;
-      text-align: center;
-      background: url('background.jpg') no-repeat center center fixed;
+      background: url('background.jpg') no-repeat center center;
       background-size: cover;
+      background-attachment: scroll;
+      text-align: center;
     }
 
     header {
       position: relative;
-      background: transparent;
-      min-height: clamp(200px, 45vw, 400px);
-      overflow: visible;
+      min-height: 40vh;
     }
 
     .wave-container {
@@ -47,80 +46,67 @@
       justify-content: center;
       align-items: flex-end;
       height: 100%;
-      overflow: visible;
     }
 
     .wave {
-      display: block;
-      max-width: var(--wave-max-width);
+      max-width: 600px;
       width: 100%;
       height: auto;
       transform: translateX(-100px);
       animation: waveCrashIn 2s ease forwards;
-      z-index: 1;
-      transition: opacity 0.4s ease;
     }
 
     @keyframes waveCrashIn {
-      0% {
-        opacity: 0;
-        transform: translateX(-100px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      from { opacity: 0; transform: translateX(-100px); }
+      to { opacity: 1; transform: translateX(0); }
     }
 
-    .title,
-    .subtitle {
+    .title, .subtitle {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 2;
-      color: #083f87;
+      color: var(--text-color);
       margin: 0;
-      padding: 0;
+      z-index: 2;
     }
 
     .title {
       font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
-      letter-spacing: 0.1em;
+      font-size: var(--title-size);
       top: 58%;
     }
 
     .subtitle {
-      font-size: 2.5rem;
-      top: 70%;
+      font-size: var(--subtitle-size);
+      top: 72%;
     }
 
     .content {
       max-width: 800px;
       margin: 0 auto;
-      background: transparent;
       padding: 20px;
     }
 
     section {
       padding: 40px 20px;
-      box-sizing: border-box;
     }
 
     h2 {
-      font-size: 2.8rem;
+      font-size: var(--h2-size);
       margin: 0 0 12px 0;
+      color: var(--text-color);
     }
 
     p {
-      font-size: 2rem;
+      font-size: var(--p-size);
       line-height: 1.6;
-      margin: 4px 0 0 0;
+      margin: 8px 0;
+      color: var(--text-color);
     }
 
     a {
+      color: var(--text-color);
       text-decoration: none;
-      color: #083f87;
       transition: color 0.3s ease;
     }
 
@@ -129,8 +115,7 @@
     }
 
     #contact p a {
-      font-weight: normal;
-      font-size: 2.5rem;
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
       display: inline-block;
       margin-top: 10px;
     }
@@ -140,38 +125,13 @@
     }
 
     .social-icon img {
-      width: var(--facebook-logo-size);
-      max-width: 100%;
+      width: var(--logo-size);
       height: auto;
       transition: transform 0.3s ease;
     }
 
     .social-icon img:hover {
       transform: scale(1.1);
-    }
-
-    @media (max-width: 600px) {
-      .title {
-        font-size: 2rem;
-        top: 60%;
-      }
-
-      .subtitle {
-        font-size: 1.8rem;
-        top: 72%;
-      }
-
-      h2 {
-        font-size: 2.2rem;
-      }
-
-      p {
-        font-size: 1.6rem;
-      }
-
-      :root {
-        --facebook-logo-size: 60px;
-      }
     }
   </style>
 </head>
@@ -187,8 +147,8 @@
   <main class="content">
     <section id="about">
       <h2><a href="#about">About Me</a></h2>
-      <p>Hi, I’m Emma - Welcome!<br/>
-      Hi, I’m Emma - Welcome!
+      <p>Hi, I’m Emma - Welcome!</p>
+      <p>
 I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.
 
 Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.
@@ -203,7 +163,7 @@ I believe that when we honour who we truly are, everyone around us benefits. You
     <section id="community">
       <h2><a href="#community">Join the ‘Becoming You’ online community - A safe and nurturing place to grow</a></h2>
       <div class="social-icon">
-        <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank">
           <img src="facebook.png" alt="Join us on Facebook" />
         </a>
       </div>
@@ -212,8 +172,7 @@ I believe that when we honour who we truly are, everyone around us benefits. You
     <section id="resources">
       <h2><a href="#resources">Resources and Courses (incl. some fab free stuff!)</a></h2>
       <h2>
-        <a href="https://theleap.co/creator/becomingyou/" target="_blank" rel="noopener noreferrer"
-          style="font-size: 3rem; font-family: 'Apricot', sans-serif; transition: color 0.3s ease; display: inline-block;">
+        <a href="https://theleap.co/creator/becomingyou/" target="_blank" style="font-family: 'Apricot';">
           Click here
         </a>
       </h2>
@@ -223,7 +182,7 @@ I believe that when we honour who we truly are, everyone around us benefits. You
       <h2><a href="#journal">My Self Care Journal</a></h2>
       <div class="social-icon">
         <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div"
-          target="_blank" rel="noopener noreferrer">
+          target="_blank">
           <img src="Amazon.svg" alt="View on Amazon" />
         </a>
       </div>
@@ -232,9 +191,7 @@ I believe that when we honour who we truly are, everyone around us benefits. You
     <section id="contact">
       <h2><a href="#contact">Get in touch</a></h2>
       <p>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=becomingyou36@gmail.com" target="_blank" rel="noopener noreferrer">
-          becomingyou36@gmail.com
-        </a>
+        <a href="mailto:becomingyou36@gmail.com">becomingyou36@gmail.com</a>
       </p>
     </section>
   </main>
