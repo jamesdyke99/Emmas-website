@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Becoming You</title>
+
+  <!-- Google Font: Montserrat for title -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font: Apricot -->
+  <style>
+    :root {
+      --wave-max-width: 600px;
+      --facebook-logo-size: 100px;
+    }
+
+    @font-face {
+      font-family: 'Apricot';
+      src: url('Apricot-BF650c4a6357ce1.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      scroll-behavior: smooth;
+      font-family: 'Apricot', sans-serif;
+      color: #083f87;
+      text-align: center;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      position: relative;
+      background: transparent;
+      min-height: clamp(200px, 45vw, 400px);
+      overflow: visible;
+    }
+
+    .wave-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .wave {
+      display: block;
+      max-width: var(--wave-max-width);
+      width: 100%;
+      height: auto;
+      transform: translateX(-100px);
+      animation: waveCrashIn 2s ease forwards;
+      z-index: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    @keyframes waveCrashIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .title,
+    .subtitle {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: #083f87;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0.1em;
+      top: 58%;
+    }
+
+    .subtitle {
+      font-size: 2.5rem;
+      top: 70%;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: transparent;
+      padding: 20px;
+    }
+
+    section {
+      padding: 50px 20px 50px 20px;
+      min-height: auto;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin: 0 0 12px 0;
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 1.6;
+      margin: 4px 0 0 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #083f87;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0a609c;
+    }
+
+    #contact p a {
+      font-weight: normal;
+      font-size: 2.5rem;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      margin-top: 20px;
+    }
+
+    .social-icon img {
+      width: var(--facebook-logo-size);
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wave-container">
+      <img src="Wave.svg" alt="Wave Logo" id="wave" class="wave" />
+      <h1 class="title">BECOMING YOU</h1>
+      <p class="subtitle">Nurturing your authentic self one day at a time</p>
+    </div>
+  </header>
+
+  <main class="content">
+    <section id="about">
+      <h2><a href="#about">About Me</a></h2>
+      <p>Hi, I’m Emma - Welcome!
+      I’m the founder of Becoming You and a Wellbeing Coach passionate about helping women reconnect with themselves.
+
+      Through workshops and courses (online and in-person) and my facebook group, I support women to rediscover what brings them joy, making space for self-care, and living more authentically.
+
+      My own journey began over a decade ago when I realised I’d lost touch with who I was. Like many women, I’d poured everything into my family and left nothing for myself. Supporting my son to explore his passions made me realise I had no idea what mine were anymore.
+
+      Since then, I’ve been on a path of rediscovery, reconnecting with my childhood passions, discovering new ones, and learning to find joy in the little things.
+
+      I believe that when we honour who we truly are, everyone around us benefits. You deserve to feel like you again and I’d love to help you get there.</p>
+    </section>
+
+    <section id="community">
+      <h2><a href="#community">Join the ‘Becoming You’ online community - A safe and nurturing place to grow</a></h2>
+      <p></p>
+      <div class="social-icon">
+        <a href="https://www.facebook.com/groups/1431875551031104/" target="_blank" rel="noopener noreferrer">
+          <img src="facebook.png" alt="Join us on Facebook" />
+        </a>
+      </div>
+    </section>
+
+    <section id="resources">
+      <h2><a href="#resources">Resources and Courses (incl. some fab free stuff!)</a></h2>
+      <p></p>
+      <h2>
+        <a href="https://theleap.co/creator/becomingyou/" target="_blank" rel="noopener noreferrer" style="font-size: 3rem; font-family: 'Apricot', sans-serif; transition: color 0.3s ease; display: inline-block;">
+          Click here
+        </a>
+      </h2>
+    </section>
+
+  <section id="journal">
+  <h2><a href="#journal">My Self Care Journal</a></h2>
+  <p></p>
+  <div class="social-icon">
+    <a href="https://www.amazon.co.uk/dp/B0FGY9MN2V?ref=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&ref_=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&social_share=cm_sw_r_ffobk_cso_wa_apan_dp_BRH83FZ85SFWB5QB1TCE&bestFormat=true&previewDohEventScheduleTesting=C#detailBullets_feature_div" target="_blank" rel="noopener noreferrer">
+      <img src="Amazon.svg" alt="View on Amazon" />
+    </a>
+  </div>
+</section>
+
+
+    <section id="contact">
+      <h2><a href="#contact">Get in touch</a></h2>
+      <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=becomingyou36@gmail.com" target="_blank" rel="noopener noreferrer">becomingyou36@gmail.com</a></p>
+    </section>
+  </main>
+
+  <script>
+    const wave = document.getElementById('wave');
+    window.addEventListener('scroll', () => {
+      const maxScroll = 200;
+      const opacity = Math.max(0, 1 - window.scrollY / maxScroll);
+      wave.style.opacity = opacity;
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
